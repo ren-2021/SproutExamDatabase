@@ -6,7 +6,7 @@ CREATE OR ALTER PROC pr_DeleteEmployee
 AS
 BEGIN
  BEGIN TRY 
-   UPDATE Employee SET IsDeleted = 0 WHERE Id = @Id
+   UPDATE Employee SET IsDeleted = 1 WHERE Id = @Id
    SET @IsSuccess = 1;
  END TRY
  BEGIN CATCH
